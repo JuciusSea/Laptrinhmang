@@ -42,7 +42,7 @@ public class lwlwbHKj_UDP_String {
         
         client.receive(dprei);
         
-        String Reiceive = new String(dprei.getData()).toString();
+        String Reiceive = new String(dprei.getData(), 0, dprei.getLength()).trim();
         System.out.println(Reiceive);
         
         
