@@ -4,6 +4,8 @@
  */
 package WebService;
 
+
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -11,9 +13,13 @@ import java.util.List;
  * @author haivi
  */
 public class CharacterServiceClient {
+    
+    
     public static void main(String[] args) {
         List<String> data = requestStringArray("B21DCCN317", "NmIDDjaZ");
         System.out.println(data);
+        data.sort(Comparator.comparingInt(String::length));
+        submitCharacterStringArray("B21DCCN317", "NmIDDjaZ", data);
     }
 
     private static java.util.List<java.lang.String> requestStringArray(java.lang.String studentCode, java.lang.String qCode) {
