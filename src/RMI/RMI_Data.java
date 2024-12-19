@@ -4,7 +4,6 @@
  */
 package RMI;
 
-import RMI_int.DataService;
 import java.net.MalformedURLException;
 import java.rmi.*;
 import java.util.ArrayList;
